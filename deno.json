@@ -2,8 +2,8 @@
   "imports": {
     "deco-sites/redirect/": "./",
     "$store/": "./",
-    "deco/": "https://denopkg.com/deco-cx/deco@1.47.5/",
-    "apps/": "https://denopkg.com/deco-cx/apps@0.24.10/",
+    "deco/": "https://denopkg.com/deco-cx/deco@1.48.1/",
+    "apps/": "https://denopkg.com/deco-cx/apps@0.25.5/",
     "$fresh/": "https://deno.land/x/fresh@1.6.1/",
     "preact": "https://esm.sh/preact@10.18.1",
     "preact/": "https://esm.sh/preact@10.18.1/",
