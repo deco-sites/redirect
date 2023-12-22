@@ -13,8 +13,8 @@ export async function handler(
     url.host = `${redirectRecord[0][0]}.${url.host}`
     return Response.redirect(url.href, 301);
   } catch (e) {
-    console.log(e)
-    return Response.redirect(url.href, 404);
+    url.host = `www.${url.host}`
+    return Response.redirect(url.href, 301);
   }
 
 }
