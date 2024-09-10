@@ -1,4 +1,3 @@
-
 import { FreshContext } from "$fresh/server.ts";
 
 export async function handler(
@@ -7,14 +6,13 @@ export async function handler(
 ) {
   const url = new URL(req.url);
 
-  try{
-    const redirectRecord = await Deno.resolveDns(`redirect.${url.host}`, "TXT")
+  try {
+    const redirectRecord = await Deno.resolveDns(`redirect.${url.host}`, "TXT");
 
-    url.host = `${redirectRecord[0][0]}.${url.host}`
+    url.host = `${redirectRecord[0][0]}.${url.host}`;
     return Response.redirect(url.href, 301);
-  } catch (e) {
-    url.host = `www.${url.host}`
+  } catch (_e) {
+    url.host = `www.${url.host}`;
     return Response.redirect(url.href, 301);
   }
-
 }
