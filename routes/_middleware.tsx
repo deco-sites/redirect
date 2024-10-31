@@ -7,11 +7,6 @@ export async function handler(
 ) {
   const url = new URL(req.url);
   
-  if(url.host.includes("zeedog.com.br"){
-    url.host = `www.zeedog.com.br`;
-    return Response.redirect(url.href, 301);
-  }
-
   try{
     const redirectRecord = await Deno.resolveDns(`redirect.${url.host}`, "TXT")
 
